@@ -14,17 +14,35 @@ public class SimpleLinkedList {
 		
 	}
 
-	public void add(int i) {
+	public boolean add(int i) {
+		boolean isAdded = false;
 		Node newNode = new Node(i);
-		newNode.next = head;
-		head = newNode;
-		
+		if(head==null) {
+			head=newNode;
+			isAdded = true;
+		}else {
+			
+			Node temp = head;
+			if(temp.next!=null) {
+				temp=temp.next;		
+			}
+			temp.next=newNode;
+			isAdded = true;
+		}
+		return isAdded;
 	}
-
+	
 	public void print() {
-		Node temp = head;
-		System.out.println("56 30 70");
-		
+		if(head==null) {
+			System.out.println("linkedList is empty");
+		}else {
+			Node temp =head;
+			System.out.println("LinkedList is : ");
+			while(temp!=null) {
+				System.out.print(temp.key + "-->");
+				temp=temp.next;
+			}
+		}
+		System.out.println();
 	}
-
 }
