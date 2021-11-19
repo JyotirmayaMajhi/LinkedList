@@ -39,6 +39,30 @@ public class LinkedList {
 		head = newNode;
 	}
 	
+public void insertAtPos(int pos, int data) {
+		
+		if(pos < 1) {
+			System.out.println("Invalid pos");
+			return;
+		}
+		if(pos == 1) {
+			push(data);
+		}
+		else {
+			Node newNode = new Node(data);
+			Node temp = head;
+			int count = 1;
+			while(count < pos-1) {
+				temp = temp.next;
+				count++;
+			}
+			Node curr = temp.next;
+			temp.next = newNode;
+			newNode.next = temp;
+			
+		}
+	}
+	
 	public void print() {
 		if(head==null) {
 			System.out.println("linkedList is empty");
