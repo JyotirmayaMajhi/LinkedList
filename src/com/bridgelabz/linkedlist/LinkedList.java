@@ -1,9 +1,9 @@
 package com.bridgelabz.linkedlist;
 
-import com.bridgelabz.linkedlist.SimpleLinkedList.Node;
+
 
 public class LinkedList {
-Node head;
+	Node head;
 	
 	private class Node{
 		int key;
@@ -32,6 +32,7 @@ Node head;
 		}
 		return isAdded;
 	}
+	
 	public void push(int data) {
 		Node newNode = new Node(data);
 		newNode.next = head;
@@ -50,4 +51,5 @@ Node head;
 			}
 		}
 		System.out.println();
+	}
 }
