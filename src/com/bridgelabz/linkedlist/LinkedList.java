@@ -58,22 +58,28 @@ public void insertAtPos(int pos, int data) {
 			}
 			Node curr = temp.next;
 			temp.next = newNode;
-			newNode.next = temp;
+			newNode.next = curr;
 			
 		}
 	}
+	public int pop() {
+		if(head == null) {
+			System.out.println("List is Empty hence deletion is not possible");
+			return 0;
+		}
+		Node temp = head;
+		head = temp.next;
+		return temp.key;
+	}
 	
 	public void print() {
-		if(head==null) {
-			System.out.println("linkedList is empty");
-		}else {
-			Node temp =head;
-			System.out.println("LinkedList is : ");
-			while(temp!=null) {
+		Node temp =head;
+			
+		System.out.println("LinkedList is : ");
+		while(temp!=null) {
 				System.out.print(temp.key + "-->");
 				temp=temp.next;
 			}
-		}
 		System.out.println();
 	}
 }
