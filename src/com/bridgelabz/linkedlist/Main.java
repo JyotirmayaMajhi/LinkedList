@@ -11,6 +11,12 @@ public class Main {
 		linkedlist.insertAtPos(2,30);
 		
 		linkedlist.print();
+		
+		System.out.println("Deleted key is : " + linkedlist.pop());
+		linkedlist.print();
+		
+		System.out.println("Deleted last key is : " + linkedlist.popLast());
+		linkedlist.print();
 
 	}
 

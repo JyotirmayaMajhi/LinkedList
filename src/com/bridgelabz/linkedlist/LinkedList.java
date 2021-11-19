@@ -72,6 +72,21 @@ public void insertAtPos(int pos, int data) {
 		return temp.key;
 	}
 	
+	public int popLast() {
+		if(head==null) {
+			System.out.println(" Empty List");
+		}
+		Node temp = head;
+		
+		if (temp.next != null) {
+			temp = temp.next;
+		}
+		int popLastKey=temp.next.key;
+		temp.next=null;
+		return popLastKey;
+		
+	}
+	
 	public void print() {
 		Node temp =head;
 			
