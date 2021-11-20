@@ -87,6 +87,29 @@ public void insertAtPos(int pos, int data) {
 		
 	}
 	
+	
+	
+	public boolean Search_Node(int data) {
+		if(head == null) {
+			System.out.println("Empty");
+			return false;
+		}
+		int count = 0;
+		Node temp = head;
+		boolean isFound = false;
+		while(temp != null) {
+			if(temp.key == data) {
+				isFound = true;
+				break;
+			}
+			temp = temp.next;
+		}
+		
+		return isFound;
+		
+	}
+	
+
 	public void print() {
 		Node temp =head;
 			
